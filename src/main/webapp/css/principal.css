@@ -1,0 +1,13 @@
+        
+		
+		
+		
+.principal {
+    /*-ms-flex: 70%;*/
+    /* IE10 */
+    /*flex: 70%;*/
+	width:1120px;
+    background-color: white;
+    padding: 20px;
+	margin-left:400px;
+}

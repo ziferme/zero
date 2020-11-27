@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8"/>
+
+    <title>Answer</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+    <!-- Custom styles for this template -->
+    <link href="#" th:href="@{/css/style.css}" rel="stylesheet" />
+    
+ 	<link href="#" th:href="@{/css/contacts.css}" rel="stylesheet" />
+ 	
+  </head>
+
+  <body>
+	
+	<div class="container">
+	
+		<br/>
+		<div class="panel panel-default">
+			<div class="panel-heading"></div>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>ID_ANSWER   	</th>
+						<th>CONTENT_ANSWER  </th>
+						<th>IMG1_ANSWER  	</th>
+						<th>IMG2_ANSWER  	</th>
+						<th>IMG3_ANSWER  	</th>
+						<th>LOG_ANSWER  	</th>
+						<th>DATE_ANSWER	    </th>
+						<th>ID_AUTHOR   	</th>
+						<th>ID_LANGUAGE 	</th>
+						<th>CORRECT_ANSWER  </th>
+						<th>ID_QUESTION 	</th>
+
+						<th>ACCIONES</th>	
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="answer : ${answers}">
+						<td th:text="${answer.ID_ANSWER}" th:value="${ID_ANSWER}"></td>
+						<td th:text="${answer.CONTENT_ANSWER}" th:value="${CONTENT_ANSWER}"></td>
+						<td th:text="${answer.IMG1_ANSWER}" th:value="${IMG1_ANSWER}"></td>
+						<td th:text="${answer.IMG2_ANSWER}" th:value="${IMG2_ANSWER}"></td>
+						<td th:text="${answer.IMG3_ANSWER}" th:value="${IMG3_ANSWER}"></td>
+						<td th:text="${answer.LOG_ANSWER}" th:value="${LOG_ANSWER}"></td>
+						<td th:text="${answer.DATE_ANSWER}" th:value="${DATE_ANSWER}"></td>
+						<td th:text="${answer.ID_AUTHOR}" th:value="${ID_AUTHOR}"></td>
+						<td th:text="${answer.ID_LANGUAGE}" th:value="${ID_LANGUAGE}"></td>
+						<td th:text="${answer.CORRECT_ANSWER}" th:value="${CORRECT_ANSWER}"></td>
+						<td th:text="${answer.ID_QUESTION}" th:value="${ID_QUESTION}"></td>
+						<td>
+						    <a href="#" th:href="@{/answer?${answer.ID_ANSWER}=__${answer.${answer.ID_ANSWER}}__}">
+								<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
+						    </a>
+						    <a href="#" th:href="@{/removecontact?${answer.ID_ANSWER}=__${answer.${answer.ID_ANSWER}}__}">
+								<button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+		</div>
+
+		
+		<div class="panel panel-default">
+			<div class="panel-heading"></div>
+			<form role="form" th:action="@{/update-answer}" method="post">
+
+			
+			<div class="form-row">
+			
+			
+					<div class="col-md-4 mb-3">
+					<label for="exampleInputEmail1">
+						ID_ANSWER
+					</label>
+					<input type="text" class="form-control" th:placeholder="${answer_uni.ID_ANSWER}" th:field="${answer_uni.ID_ANSWER}"/>
+					</div>
+					
+					 <div class="col-md-4 mb-3">
+					<label for="exampleInputPassword1">
+						CONTENT_ANSWER
+					</label>
+					<input type="text" class="form-control" th:placeholder="${answer_uni.CONTENT_ANSWER}" th:field="${answer_uni.CONTENT_ANSWER}"/>
+					</div>
+					
+					
+					<div class="col-md-4 mb-3">
+					<label for="exampleInputPassword1">
+						IMG1_ANSWER
+					</label>
+					<input type="text" class="form-control" th:placeholder="${answer_uni.IMG1_ANSWER}" th:field="${answer_uni.IMG1_ANSWER}"/>
+					</div>
+					
+					<div class="col-md-4 mb-3">
+					<label for="exampleInputPassword1">
+						IMG2_ANSWER
+					</label>
+					<input type="text" class="form-control" th:placeholder="${answer_uni.IMG2_ANSWER}" th:field="${answer_uni.IMG2_ANSWER}"/>
+					</div>
+					
+					<div class="col-md-4 mb-3">
+					<label for="exampleInputPassword1">
+						IMG3_ANSWER
+					</label>
+					<input type="text" class="form-control" th:placeholder="${answer_uni.IMG3_ANSWER}" th:field="${answer_uni.IMG3_ANSWER}"/>
+					</div>
+					
+					<div class="col-md-4 mb-3">
+					<label for="exampleInputPassword1">
+						LOG_ANSWER
+					</label>
+					<input type="text" class="form-control" th:placeholder="${answer_uni.LOG_ANSWER}" th:field="${answer_uni.LOG_ANSWER}"/>
+					</div>
+					
+					<div class="col-md-4 mb-3">
+					<label for="exampleInputPassword1">
+						DATE_ANSWER
+					</label>
+					<input type="text" class="form-control" th:placeholder="${answer_uni.DATE_ANSWER}" th:field="${answer_uni.DATE_ANSWER}"/>
+					</div>
+					
+					<div class="col-md-4 mb-3">
+					<label for="exampleInputPassword1">
+						ID_AUTHOR
+					</label>
+					<input type="text" class="form-control" th:placeholder="${answer_uni.ID_AUTHOR}" th:field="${answer_uni.ID_AUTHOR}"/>
+					</div>
+					
+					<div class="col-md-4 mb-3">
+					<label for="exampleInputPassword1">
+						ID_LANGUAGE
+					</label>
+					<input type="text" class="form-control" th:placeholder="${answer_uni.ID_LANGUAGE}" th:field="${answer_uni.ID_LANGUAGE}"/>
+					</div>
+					
+					<div class="col-md-4 mb-3">
+					<label for="exampleInputPassword1">
+						CORRECT_ANSWER
+					</label>
+					<input type="text" class="form-control" th:placeholder="${answer_uni.CORRECT_ANSWER}" th:field="${answer_uni.CORRECT_ANSWER}"/>
+					</div>
+					
+					<div class="col-md-4 mb-3">
+					<label for="exampleInputPassword1">
+						ID_QUESTION
+					</label>
+					<input type="text" class="form-control" th:placeholder="${answer_uni.ID_ANSWER}" th:field="${answer_uni.ID_ANSWER}"/>
+					</div>
+					
+			    </div>
+			    <br>
+
+				<center><button type="submit" class="btn btn-primary">
+					Actualizar
+				</button></center>
+				
+			</form>
+			
+			
+			
+			
+
+			
+		</div>
+		
+		
+	
+	</div>
+
+	
+	
+
+	
+	
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+package com.zifer.zeroproject.model;
+
+import java.util.Date;
+
+
+public class JuridiccionModel {
+	
+
+	public int ID_JURISDICCION_ALTO_RIESGO;
+	public String JURISDICCION_ALTO_RIESGO;
+	public String ESTATUS;
+	public Date REGISTRO_CONTROL;
+	public int getID_JURISDICCION_ALTO_RIESGO() {
+		return ID_JURISDICCION_ALTO_RIESGO;
+	}
+	public void setID_JURISDICCION_ALTO_RIESGO(int iD_JURISDICCION_ALTO_RIESGO) {
+		ID_JURISDICCION_ALTO_RIESGO = iD_JURISDICCION_ALTO_RIESGO;
+	}
+	public String getJURISDICCION_ALTO_RIESGO() {
+		return JURISDICCION_ALTO_RIESGO;
+	}
+	public void setJURISDICCION_ALTO_RIESGO(String jURISDICCION_ALTO_RIESGO) {
+		JURISDICCION_ALTO_RIESGO = jURISDICCION_ALTO_RIESGO;
+	}
+	public String getESTATUS() {
+		return ESTATUS;
+	}
+	public void setESTATUS(String eSTATUS) {
+		ESTATUS = eSTATUS;
+	}
+	public Date getREGISTRO_CONTROL() {
+		return REGISTRO_CONTROL;
+	}
+	public void setREGISTRO_CONTROL(Date rEGISTRO_CONTROL) {
+		REGISTRO_CONTROL = rEGISTRO_CONTROL;
+	}
+	public JuridiccionModel(int iD_JURISDICCION_ALTO_RIESGO, String jURISDICCION_ALTO_RIESGO, String eSTATUS,
+			Date rEGISTRO_CONTROL) {
+		super();
+		ID_JURISDICCION_ALTO_RIESGO = iD_JURISDICCION_ALTO_RIESGO;
+		JURISDICCION_ALTO_RIESGO = jURISDICCION_ALTO_RIESGO;
+		ESTATUS = eSTATUS;
+		REGISTRO_CONTROL = rEGISTRO_CONTROL;
+	}
+	
+	public JuridiccionModel() {
+
+	}
+	
+	
+	
+
+}

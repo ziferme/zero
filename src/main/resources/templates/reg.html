@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8"/>
+
+    <title>Juridiccion</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+    <!-- Custom styles for this template -->
+    <link href="#" th:href="@{/css/style.css}" rel="stylesheet" />
+    
+ 	<link href="#" th:href="@{/css/contacts.css}" rel="stylesheet" />
+ 	
+  </head>
+
+  <body>
+
+	
+<form role="form" th:action="@{/update-juridiccion}">
+				<div class="form-group">
+					 
+					<label for="exampleInputEmail1">
+						ID_JURISDICCION_ALTO_RIESGO
+					</label>
+					<input type="text" class="form-control" th:placeholder="${juri_uni.ID_JURISDICCION_ALTO_RIESGO}" />
+				</div>
+				<div class="form-group">
+					 
+					<label for="exampleInputPassword1">
+						JURISDICCION_ALTO_RIESGO
+					</label>
+					<input type="text" class="form-control" th:placeholder="${juri_uni.JURISDICCION_ALTO_RIESGO}" />
+				</div>
+				
+				<div class="form-group">
+					 
+					<label for="exampleInputPassword1">
+						JURISDICCION_ALTO_RIESGO
+					</label>
+					<input type="text" class="form-control" th:placeholder="${juri_uni.ESTATUS}" />
+				</div>
+
+				<button type="submit" class="btn btn-primary">
+					Actualizar
+				</button>
+			</form>
+	
+	
+
+
+</body>
+</html>
